@@ -48,6 +48,7 @@ body{
     display: inline-block;
 }
 
+
 @media only screen and (max-width:798px){
   .about .title {
     font-size: 30px;
@@ -55,6 +56,10 @@ body{
 
   .about .content {
     text-align: left;
+  }
+
+  .social{
+    width:30px;
   }
 }
 
@@ -214,8 +219,4 @@ body{
    color: #f2f2f2;
    font-family: 'Mitr', sans-serif;
    font-size:18px
-}
-
-.social:hover{
-  background:#3c4559;
 }
