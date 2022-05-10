@@ -1,0 +1,44 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
+</head>
+
+
+<style>{{ readFile "static/css/header.css" | safeCSS }}</style>
+<script defer language="javascript" type="text/javascript"  src="{{ "/js/header.js" | urlize | relURL }}"></script>
+
+<body class="nav-body" style="background-color:#f0f0f0;">
+  <section class="nav-bar">
+  <div class="nav-container">
+    <div class="brand">
+      <a href="/"><img src="/images/ANFTP-logo.png"></a>
+    </div>
+    <nav>
+      <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+      <ul class="nav-list">
+        <li>
+          <a href="/" class= "nav-font">HOME</a>
+        </li>
+        <li>
+          <a class= "nav-font">COLLECTIONS</a>
+          <ul class="nav-dropdown">
+            <li>
+              <a href="{{ "collections/dog" | relURL }}"class= "nav-font">Adopt NFT Dogs</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class= "nav-font">MINT</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+</body>
+
+</html>

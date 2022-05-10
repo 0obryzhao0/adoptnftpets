@@ -1,0 +1,503 @@
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
+</head>
+
+
+<style>body {
+ margin: 0;
+ padding: 0;
+}
+* {
+  font-family: 'Mitr', sans-serif;
+  font-weight: 500;
+}
+.nav-bar {
+  height: 100px;
+  background: #3c4559;
+}
+
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 100px;
+  text-transform: uppercase;
+  font-size: 1.8em;
+}
+.brand a img {
+ max-height: 100px;
+}
+.brand a,
+.brand a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a,
+nav ul li a:visited {
+  display: block;
+  padding: 0 20px;
+  line-height: 100px;
+  background: #3c4559;
+  color: #ffffff;
+  text-decoration: none;
+}
+nav ul li a:hover,
+nav ul li a:visited:hover {
+  background: #fba76e;
+  color: #3c4559;
+  text-decoration: none;
+}
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+  padding-left: 4px;
+  content: ' ▾';
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #3c4559;
+  height: 70px;
+  width: 70px;
+}
+
+@media only screen and (max-width: 798px) {
+  .nav-mobile {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+ padding-left: 25%;
+
+  }
+  nav ul li ul li a {
+    padding-left: 30%;
+  }
+
+  .nav-dropdown {
+    position: static;
+  }
+ .brand a img {
+ max-height: 60px;
+ margin-top: 5px;
+ }
+}
+@media screen and (min-width: 799px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #ffffff;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+article {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+</style>
+<script defer language="javascript" type="text/javascript"  src="/js/header.js"></script>
+
+<body class="nav-body" style="background-color:#f0f0f0;">
+  <section class="nav-bar">
+  <div class="nav-container">
+    <div class="brand">
+      <a href="/"><img src="/images/ANFTP-logo.png"></a>
+    </div>
+    <nav>
+      <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+      <ul class="nav-list">
+        <li>
+          <a href="/" class= "nav-font">HOME</a>
+        </li>
+        <li>
+          <a class= "nav-font">COLLECTIONS</a>
+          <ul class="nav-dropdown">
+            <li>
+              <a href="/collections/dog"class= "nav-font">Adopt NFT Dogs</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class= "nav-font">MINT</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+</body>
+
+</html>
+
+</head>
+
+<style>body{
+  background: repeating-linear-gradient(to right,#58657f,#58657f 10px,#607193 10px,#607193 20px);
+}
+
+.about{
+    background-color: #edd0b7;
+    font-family: 'Mitr', sans-serif;
+    text-align: center;
+    border-bottom: 20px solid #008BA8;
+    border-radius: 10px 10px 0 0;
+}
+.about:after {
+    content: '';
+    background-color: #008BA8;
+    height: 10px;
+    margin: 0 0 7px;
+    display: block;
+}
+.about .header {
+    color: #fba76e;
+    background: linear-gradient(to bottom,#76B1CB 45%,#015C91 50%);
+    padding: 5px 0 5px;
+    border-radius: 10px 10px 0 0;
+}
+.about .title {
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+    padding-top: 5%;
+}
+.about .arrow {
+    color: #fff;
+    background: #008BA8;
+    padding: 10px 0;
+    margin: 0 0 30px;
+}
+
+.about .content {
+    color: #333;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: justify;
+    line-height: 40px;
+    padding: 0;
+    margin: 0 0 15px;
+    list-style: none;
+    display: inline-block;
+}
+
+@media only screen and (max-width:798px){
+  .about .title {
+    font-size: 30px;
+  }
+
+  .about .content {
+    text-align: left;
+  }
+}
+
+.roadmap{
+  color: #fba76e;
+  background:#015C91;
+  font-family: 'Mitr', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  text-align:center;
+  padding: 8px 20px;
+  margin: 10%;
+  border: 5px solid #76B1CB;
+  border-radius: 50px;
+}
+
+.main-timeline{
+    position: relative;
+    overflow: hidden;
+}
+.main-timeline:before{
+    content: "";
+    width: 10px;
+    height: 80%;
+    border-right: 8px dotted #f2f2f2;
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.main-timeline .timeline{
+    width: 50.1%;
+    float: right;
+    padding: 10px 100px 10px 50px;
+    position: relative;
+}
+.main-timeline .timeline:before{
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #015C91;
+    border: 5px solid #015C91;
+    box-shadow: 0 0 0 3px #76B1CB;
+    position: absolute;
+    top: 25px;
+    left: -13px;
+}
+.main-timeline .timeline-content{
+    display: block;
+    position: relative;
+}
+.main-timeline .timeline-content:hover{ text-decoration: none; }
+.main-timeline .title{
+    display: inline-block;
+    padding: 8px 55px 8px 25px;
+    margin: 0 0 10px 0;
+    border: 3px solid #fff;
+    border-radius: 25px 25px 25px 0;
+    background: #015C91;
+    box-shadow:  0 0 0 3px #76B1CB;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fba76e;
+    text-transform: uppercase;
+    position: relative;
+}
+.main-timeline .title i{
+    display: inline-block;
+    font-size: 30px;
+    margin-left: 5px;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+}
+.main-timeline .description {
+    background: #607193;
+    border: 10px solid #58657f;
+    padding: 0 15px;
+    font-size: 20px;
+    color: #f2f2f2;
+    margin: 0 0 5px 0;
+}
+.main-timeline .timeline:nth-child(2n){
+    float: left;
+    padding: 10px 50px 10px 100px;
+}
+.main-timeline .timeline:nth-child(2n):before{
+    left: auto;
+    right: -15px;
+}
+.main-timeline .timeline:nth-child(2n) .timeline-content{ text-align: left; }
+.main-timeline .timeline:nth-child(2n) .title{
+    padding: 8px 25px 8px 60px;
+    border-radius: 25px 25px 0 25px;
+}
+.main-timeline .timeline:nth-child(2n) .title i{
+    right: auto;
+    left: 15px;
+}
+.main-timeline .timeline:nth-child(2n):before,
+.main-timeline .timeline:nth-child(2n) .title{
+    background: #015C91;
+    box-shadow: 0 0 0 3px #76B1CB;
+}
+.main-timeline .timeline:nth-child(3n):before,
+.main-timeline .timeline:nth-child(3n) .title{
+    background: #015C91;
+    box-shadow: 0 0 0 3px #76B1CB;
+}
+.main-timeline .timeline:nth-child(4n):before,
+.main-timeline .timeline:nth-child(4n) .title{
+    background: #015C91;
+    box-shadow: 0 0 0 3px #76B1CB;
+}
+@media only screen and (max-width: 1200px){
+    .main-timeline .title{
+        font-size: 20px;
+        padding-left: 10px;
+    }
+    .main-timeline .timeline:nth-child(2n) .title{ padding-right: 10px; }
+}
+@media only screen and (max-width: 990px){
+    .main-timeline .timeline,
+    .main-timeline .timeline:nth-child(2n){ padding: 10px 50px; }
+}
+@media only screen and (max-width: 767px){
+    .main-timeline:before{ left: 20px; }
+    .main-timeline .timeline,
+    .main-timeline .timeline:nth-child(even),
+    .main-timeline .timeline:nth-child(odd){
+        width: 100%;
+        float: none;
+        padding: 10px 50px 10px 55px;
+    }
+    .main-timeline .timeline:before,
+    .main-timeline .timeline:nth-child(2n):before{ left: 5px; }
+    .main-timeline .timeline:nth-child(2n) .timeline-content{ text-align: left; }
+    .main-timeline .timeline:nth-child(2n) .title{
+        padding: 8px 55px 8px 10px;
+        border-radius: 25px 25px 25px 0;
+    }
+    .main-timeline .timeline:nth-child(2n) .title i{
+        left: auto;
+        right: 15px;
+    }
+}
+@media only screen and (max-width: 479px){
+    .main-timeline .timeline,
+    .main-timeline .timeline:nth-child(2n){ padding: 10px 0 10px 55px; }
+}
+
+.card-detail{
+   background: #607193;
+   border: 10px solid #58657f;
+   color: #f2f2f2;
+   font-family: 'Mitr', sans-serif;
+   font-size:18px
+}
+
+.social:hover{
+  background:#3c4559;
+}
+</style>
+
+<body>
+
+  <div class="card-detail" style="padding:3%; text-align:center; margin-top:3%; font-size:40px"> MINT DATE: TBA </div>
+
+  <div class="row" style= "margin: 1% auto;">
+    <div class="col-xl-5" style="text-align:center; padding-top:1%;">
+      <img src="/images/preview.gif" alt="pets" width=65%>
+    </div>
+    <div class="col-xl-5" style= "margin:4%">
+      <div class="about">
+        <div class="header">
+          <h3 class="title">Adopt NFT Dogs </h3>
+        </div>
+        <div class="arrow"></div>
+        <div class="content" style="width:80%; font-size:24px">
+          Amount of options in this collection
+          <ul style="margin-top:1%">
+            <li> Breeds: 100 </li>
+            <li> Pet Names: 230 </li>
+            <li> Age: 9 </li>
+            <li> Size: 6 (matches breed) </li>
+            <li> Skills: 20 </li>
+            <li> Likes: 57 (food) </li>
+            <li> Personality traits: 50 </li>
+          </ul>
+          Each NFT will include a link on the metadata with a profile picture of the breed.<br>This is just an image not an extra NFT.
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="background: #3c4559;padding:4%; margin-top:2%;text-align:center;">
+      <div class="container">
+        <h1 style="color:#f2f2f2;"><b>JOIN US TO LEARN THE LATEST NEWS</b></h1>
+        <div class="row">
+          <div class= "col-md"></div>
+          <div class= "col-md" style="margin:2%">
+            <a href="https://discord.gg/HFtppsWbBC" class="social"><img src="/images/discord.png" alt="common card layout" width=30%></a>
+          </div>
+          <div class= "col-md"style="margin:2%">
+            <a href="https://twitter.com/adoptNFTpets" class="social"><img src="/images/twitter.png" alt="common card layout" width=30%></a>
+          </div>
+          <div class= "col-md"></div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{{ partialCached "header.html" .}}
+</head>
+
+<style>{{ readFile "static/css/style.css" | safeCSS }}</style>
+
+<body>
+
+  <div class="card-detail" style="padding:3%; text-align:center; margin-top:3%; font-size:40px"> MINT DATE: TBA </div>
+
+  <div class="row" style= "margin: 1% auto;">
+    <div class="col-xl-5" style="text-align:center; padding-top:1%;">
+      <img src="/images/preview.gif" alt="pets" width=65%>
+    </div>
+    <div class="col-xl-5" style= "margin:4%">
+      <div class="about">
+        <div class="header">
+          <h3 class="title">Adopt NFT Dogs </h3>
+        </div>
+        <div class="arrow"></div>
+        <div class="content" style="width:80%; font-size:24px">
+          Amount of options in this collection
+          <ul style="margin-top:1%">
+            <li> Breeds: 100 </li>
+            <li> Pet Names: 230 </li>
+            <li> Age: 9 </li>
+            <li> Size: 6 (matches breed) </li>
+            <li> Skills: 20 </li>
+            <li> Likes: 57 (food) </li>
+            <li> Personality traits: 50 </li>
+          </ul>
+          Each NFT will include a link on the metadata with a profile picture of the breed.<br>This is just an image not an extra NFT.
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="background: #3c4559;padding:4%; margin-top:2%;text-align:center;">
+      <div class="container">
+        <h1 style="color:#f2f2f2;"><b>JOIN US TO LEARN THE LATEST NEWS</b></h1>
+        <div class="row">
+          <div class= "col-md"></div>
+          <div class= "col-md" style="margin:2%">
+            <a href="https://discord.gg/HFtppsWbBC" class="social"><img src="/images/discord.png" alt="common card layout" width=30%></a>
+          </div>
+          <div class= "col-md"style="margin:2%">
+            <a href="https://twitter.com/adoptNFTpets" class="social"><img src="/images/twitter.png" alt="common card layout" width=30%></a>
+          </div>
+          <div class= "col-md"></div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
