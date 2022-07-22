@@ -218,27 +218,11 @@ article {
           <a href="/" class= "nav-font">HOME</a>
         </li>
         <li>
-          <a class= "nav-font">COLLECTIONS</a>
-          <ul class="nav-dropdown">
-            <li>
-              <a href="/collections/dog"class= "nav-font">Adopt NFT Dogs</a>
-            </li>
-          </ul>
-        </li>
-        <li>
           <a href="https://mint.adoptnftpets.com/" class= "nav-font">MINT</a>
         </li>
         <li>
-          <div style="background:#3c4559"></div>
-          <a href="https://discord.gg/HFtppsWbBC"><img src="/images/discord.png" alt="discord server" style="width:30px;padding:1%"></a>
-        </li>
-        <li>
-          <div style="padding:1%, background:#3c4559"></div>
-          <a href="https://t.me/adoptnftpets"><img src="/images/telegram.png" alt="telegram group" style="width:30px;"></a>
-        </li>
-        <li>
           <div style="padding:1% background:#3c4559"></div>
-          <a href="https://discord.gg/HFtppsWbBC"><img src="/images/twitter.png" alt="twitter profile" style="width:30px;"></a>
+          <a href="https://twitter.com/adoptNFTpets"><img src="/images/twitter.png" alt="twitter profile" style="width:30px;"></a>
         </li>
       </ul>
     </nav>
@@ -329,6 +313,7 @@ article {
   border-radius: 50px;
 }
 
+/*
 .main-timeline{
     position: relative;
     overflow: hidden;
@@ -465,13 +450,73 @@ article {
     .main-timeline .timeline,
     .main-timeline .timeline:nth-child(2n){ padding: 10px 0 10px 55px; }
 }
+*/
 
 .card-detail{
    background: #607193;
    border: 10px solid #58657f;
    color: #f2f2f2;
    font-family: 'Mitr', sans-serif;
-   font-size:18px
+}
+
+.btn{
+    color: #fff;
+    background-color: transparent;
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    padding: 6px 32px 6px;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+.btn:focus,
+.btn:hover{
+    color: #fff;
+    background-color: transparent;
+}
+.btn:before,
+.btn:after{
+    content: '';
+    background-color: #76B1CB;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    transform-origin: bottom center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: all 0.5s ease 0s;
+}
+.btn:after{
+    background-color: transparent;
+    height: 15px;
+    width: 15px;border: 3px solid #76B1CB;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 0;
+    opacity: 0;
+    transform: translateY(-50%) rotate(45deg);
+    top: 43%;
+}
+.btn:focus:before,
+.btn:hover:before{
+    opacity: 1;
+    transform: perspective(700px) rotateX(-87deg);
+}
+.btn:focus:after,
+.btn:hover:after{
+    opacity: 1;
+    left: calc(100% - 32px);
+}
+@media only screen and (max-width: 767px){
+    .btn{ margin-bottom: 20px; }
 }
 
 .redbubble{
@@ -548,66 +593,6 @@ article {
 </body>
 
 <body>
-  <div class="container">
-    <div class="roadmap">ROADMAP</div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="main-timeline">
-                <div class="timeline">
-                    <div class="timeline-content">
-                        <h3 class="title">PREPARATIONS</h3>
-                        <div class="description">
-                            <ul>
-                              <li> Design collection </li>
-                              <li> Create Website </li>
-                              <li> Create Discord Server </li>
-                              <li> Create Twitter Page </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline">
-                    <div class="timeline-content">
-                        <h3 class="title">MAY-JUNE</h3>
-                        <div class="description">
-                          <ul>
-                            <li> Build the community </li>
-                            <li> Adopt NFT Dogs - Whitelist </li>
-                            <li> 15% donated to 3 animal rescue organizations</li>
-                          </ul>
-                        </div>
-                      </div>
-                </div>
-                <div class="timeline">
-                    <div class="timeline-content">
-                        <h3 class="title">JUNE</h3>
-                        <div class="description">
-                            <ul>
-                              <li> Adopt NFT Dogs - Public launch</li>
-                              <li> 20% sold - $5000 donated to 5 animal rescue organizations</li>
-                              <li> 50% sold - $5000 donated to 5 animal rescue organizations</li>
-                              <li> 100% sold - $5000 donated to 5 animal rescue organizations</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline">
-                    <div class="timeline-content">
-                        <h3 class="title">FUTURE PROJECTS</h3>
-                        <div class="description">
-                          <ul>
-                            <li> Adopt NFT Cats collection (September 2022) </li>
-                            <li> Pet care blockchain game (2023)</li>
-                            <li> Social media mini events <br> (Based on community activity)</li>
-                          </ul>
-                        </div>
-                      </div>
-                </div>
-            </div>
-        </div>
-      </div>
-    </div>
-
     <div class="container"><div class="roadmap">CARD SYSTEM</div></div>
 
     <div style=" text-align:center;">
@@ -627,14 +612,55 @@ article {
       </div>
     </div>
 
+    <div class="container"><div class="roadmap">LATEST COLLECTION</div></div>
+    <div class="row">
+      <div class="col-xl-5" style="text-align:center;">
+        <img src="/images/preview.gif" alt="pets" width=65%>
+      </div>
+      <div class="col-xl-5">
+        <br><br>
+        <div class="about">
+          <div class="header">
+            <h3 class="title">Adopt NFT Dogs </h3>
+          </div>
+          <div class="arrow"></div>
+          <div class="content" style="width:80%; font-size:24px">
+            Amount of options in this collection
+            <ul style="margin-top:1%">
+              <li> Breeds: 100 </li>
+              <li> Pet Names: 230 </li>
+              <li> Age: 9 </li>
+              <li> Size: 6 (matches breed) </li>
+              <li> Skills: 20 </li>
+              <li> Likes: 57 (food) </li>
+              <li> Personality traits: 50 </li>
+            </ul>
+            Each NFT will include a link on the metadata with a profile picture of the breed.<br>This is just an image not an extra NFT.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-detail" style="padding:3%; text-align:center; margin-top:3%; font-size:40px">
+      ADOPT YOUR OWN DOG TODAY!<br><br>
+      <a href="https://opensea.io/collection/adopt-nft-dogs" class="btn btn-lg"><span>Buy on OpenSea</span></a>
+      <a href="https://mint.adoptnftpets.com/" class="btn btn-lg"><span>Mint Directly</span></a><br>
+      <br> <span style="font-size:32px">Holders get access to an exclusive twitter group (send twitter DM with proof of purchase to join)
+      <br> For every 10 dog cards adopted we will donate $200 to a pet charity organization </span>
+    </div>
+
+    <div class="container"><div class="roadmap">ENJOY OUR PRINT ON DEMAND DESIGNS</div></div>
+    <script type="text/javascript" src="https://www.redbubble.com/assets/external_portfolio.js"></script>
+    <div class="redbubble">
+    <script id="rb-xzfcxvzx" type="text/javascript">new RBExternalPortfolio('www.redbubble.com', 'adoptnftpets', 3, 4).renderIframe();</script>
+    </div>
+
     <div style="background: #3c4559;padding:4%; margin-top:2%;text-align:center;">
       <div class="container">
-        <h1 style="color:#f2f2f2;"><b>JOIN US TO LEARN THE LATEST NEWS</b></h1>
+        <h1 style="color:#f2f2f2;"><b>FOLLOW US TO LEARN THE LATEST NEWS</b></h1>
         <div class="row">
           <div class= "col-xl" style="margin:1%">
-            <a href="https://discord.gg/HFtppsWbBC"><img src="/images/discord.png" alt="discord server" style="width:20vmin; padding:3%;"></a>
             <a href="https://twitter.com/adoptNFTpets" class="social"><img src="/images/twitter.png" alt="twitter page" style="width:20vmin; padding:3%;"></a>
-            <a href="https://t.me/adoptnftpets"><img src="/images/telegram.png" alt="telegram group" style="width:20vmin; padding:3%;"></a>
           </div>
         </div>
       </div>

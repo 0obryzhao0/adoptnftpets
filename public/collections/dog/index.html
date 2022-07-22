@@ -215,27 +215,11 @@ article {
           <a href="/" class= "nav-font">HOME</a>
         </li>
         <li>
-          <a class= "nav-font">COLLECTIONS</a>
-          <ul class="nav-dropdown">
-            <li>
-              <a href="/collections/dog"class= "nav-font">Adopt NFT Dogs</a>
-            </li>
-          </ul>
-        </li>
-        <li>
           <a href="https://mint.adoptnftpets.com/" class= "nav-font">MINT</a>
         </li>
         <li>
-          <div style="background:#3c4559"></div>
-          <a href="https://discord.gg/HFtppsWbBC"><img src="/images/discord.png" alt="discord server" style="width:30px;padding:1%"></a>
-        </li>
-        <li>
-          <div style="padding:1%, background:#3c4559"></div>
-          <a href="https://t.me/adoptnftpets"><img src="/images/telegram.png" alt="telegram group" style="width:30px;"></a>
-        </li>
-        <li>
           <div style="padding:1% background:#3c4559"></div>
-          <a href="https://discord.gg/HFtppsWbBC"><img src="/images/twitter.png" alt="twitter profile" style="width:30px;"></a>
+          <a href="https://twitter.com/adoptNFTpets"><img src="/images/twitter.png" alt="twitter profile" style="width:30px;"></a>
         </li>
       </ul>
     </nav>
@@ -326,6 +310,7 @@ article {
   border-radius: 50px;
 }
 
+/*
 .main-timeline{
     position: relative;
     overflow: hidden;
@@ -462,13 +447,73 @@ article {
     .main-timeline .timeline,
     .main-timeline .timeline:nth-child(2n){ padding: 10px 0 10px 55px; }
 }
+*/
 
 .card-detail{
    background: #607193;
    border: 10px solid #58657f;
    color: #f2f2f2;
    font-family: 'Mitr', sans-serif;
-   font-size:18px
+}
+
+.btn{
+    color: #fff;
+    background-color: transparent;
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    padding: 6px 32px 6px;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+.btn:focus,
+.btn:hover{
+    color: #fff;
+    background-color: transparent;
+}
+.btn:before,
+.btn:after{
+    content: '';
+    background-color: #76B1CB;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    transform-origin: bottom center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: all 0.5s ease 0s;
+}
+.btn:after{
+    background-color: transparent;
+    height: 15px;
+    width: 15px;border: 3px solid #76B1CB;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 0;
+    opacity: 0;
+    transform: translateY(-50%) rotate(45deg);
+    top: 43%;
+}
+.btn:focus:before,
+.btn:hover:before{
+    opacity: 1;
+    transform: perspective(700px) rotateX(-87deg);
+}
+.btn:focus:after,
+.btn:hover:after{
+    opacity: 1;
+    left: calc(100% - 32px);
+}
+@media only screen and (max-width: 767px){
+    .btn{ margin-bottom: 20px; }
 }
 
 .redbubble{
@@ -520,7 +565,7 @@ article {
 
 <body>
 
-  <div class="card-detail" style="padding:3%; text-align:center; margin-top:3%; font-size:40px"> MINT AVAILABLE <br> PRICE: 210 MATIC </div>
+  <div class="card-detail" style="padding:3%; text-align:center; margin-top:3%; font-size:40px"> MINT AVAILABLE <br> PRICE: 160 MATIC </div>
   <div style="padding:20px"></div>
   <div class="row">
     <div class="col-xl-5" style="text-align:center;">
@@ -561,7 +606,6 @@ article {
       <h1 style="color:#f2f2f2;"><b>JOIN US TO LEARN THE LATEST NEWS</b></h1>
       <div class="row">
         <div class= "col-xl" style="margin:1%">
-          <a href="https://discord.gg/HFtppsWbBC"><img src="/images/discord.png" alt="discord server" style="width:20vmin; padding:3%;"></a>
           <a href="https://twitter.com/adoptNFTpets" class="social"><img src="/images/twitter.png" alt="twitter page" style="width:20vmin; padding:3%;"></a>
         </div>
       </div>

@@ -76,6 +76,7 @@ body{
   border-radius: 50px;
 }
 
+/*
 .main-timeline{
     position: relative;
     overflow: hidden;
@@ -212,13 +213,73 @@ body{
     .main-timeline .timeline,
     .main-timeline .timeline:nth-child(2n){ padding: 10px 0 10px 55px; }
 }
+*/
 
 .card-detail{
    background: #607193;
    border: 10px solid #58657f;
    color: #f2f2f2;
    font-family: 'Mitr', sans-serif;
-   font-size:18px
+}
+
+.btn{
+    color: #fff;
+    background-color: transparent;
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    padding: 6px 32px 6px;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+.btn:focus,
+.btn:hover{
+    color: #fff;
+    background-color: transparent;
+}
+.btn:before,
+.btn:after{
+    content: '';
+    background-color: #76B1CB;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    transform-origin: bottom center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: all 0.5s ease 0s;
+}
+.btn:after{
+    background-color: transparent;
+    height: 15px;
+    width: 15px;border: 3px solid #76B1CB;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 0;
+    opacity: 0;
+    transform: translateY(-50%) rotate(45deg);
+    top: 43%;
+}
+.btn:focus:before,
+.btn:hover:before{
+    opacity: 1;
+    transform: perspective(700px) rotateX(-87deg);
+}
+.btn:focus:after,
+.btn:hover:after{
+    opacity: 1;
+    left: calc(100% - 32px);
+}
+@media only screen and (max-width: 767px){
+    .btn{ margin-bottom: 20px; }
 }
 
 .redbubble{
